@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
-import flixel.util.FlxMath;
+import flixel.math.FlxMath;
 
 import flash.display.BitmapData;
 
@@ -74,7 +74,7 @@ typedef MODE_7_PARAMS =
 
 	 	var sprite = new FlxSprite(0,0);
 	 	sprite.makeGraphic(Math.floor(FlxG.width), Math.floor(FlxG.height), 0x00000000);
-	 	_canvas = sprite.cachedGraphics.bitmap;
+	 	_canvas = sprite.pixels;
 	 	add(sprite);
 	 	var square = new FlxSprite(0,0);
 	 	square.makeGraphic(8, 8, 0xFFFFFF00);
@@ -95,9 +95,9 @@ typedef MODE_7_PARAMS =
 	/**
 	 * Function that is called once every frame.
 	 */
-	 override public function update():Void
+	 override public function update(elapsed:Float):Void
 	 {
-	 	super.update();
+	 	super.update(elapsed);
 	 	time += Math.floor(FlxG.elapsed * 200);
 	 	//params.space_z = 600*Math.cos(time/150) + 150;
 	 	//params.angle = time/100;
