@@ -13,7 +13,7 @@
 	<!--------------------------------WINDOW SETTINGS------------------------------->
 	
 	<!--These window settings apply to all targets-->
-	<window width="320" height="240" fps="60" background="#000000" hardware="true" vsync="true" />
+	<window width="1024" height="768" fps="144" background="#000000" hardware="true" vsync="false" />
 	
 	<!--Web-specific-->
 	<window if="web"		orientation="portrait"  />
